@@ -1,7 +1,6 @@
 {
   "name": "Vunderlistfest",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "directories": {
     "test": "test"
