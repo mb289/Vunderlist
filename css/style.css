@@ -1,0 +1,134 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+/**
+ * GRIDS
+ */
+
+.grid {
+    width: 100%;
+    display: block;
+    font-size: 0;
+    text-align: justify;
+    position: relative;
+}
+.grid > * {
+    font-size: medium;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+.grid:after {
+    display: inline-block;
+    width: 100%;
+    content: "";
+    font-size: medium;
+}
+@media (min-width: 400px) {
+    .grid-2-400 > * {
+        width: 48%
+    }
+}
+@media (min-width: 600px) {
+    .grid-4-600 > * {
+        width: 24%
+    }
+}
+/**
+ * squarify
+ */
+
+.squarify {
+    position: relative;
+}
+.squarify:after {
+    content: "";
+    padding-top: 100%;
+}
+.squarify-grid > * {
+    position: relative;
+}
+.squarify-grid > *:after {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+/**
+ * todolists sections
+ */
+
+.todolists {} .todolists > * {
+    border: 2px solid black;
+    background: chartreuse;
+    margin-bottom: 1rem;
+}
+/**
+ * active states for page views
+ */
+
+.todolists, .todos {
+    display: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.todolists.active, .todos.active {
+    display: block;
+}
+@keyframe fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-2em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/**
+ * todos
+ */
+
+.todos form {
+    display: block;
+    position: relative;
+    margin-bottom: 1em;
+}
+.todos form div {
+    position: relative;
+    margin-right: 10em;
+    padding-right: 1em;
+}
+.todos form div input {
+    display: block;
+    width: 100%;
+    height: 1.9em;
+}
+.todos form button {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10em;
+}
+
+/**
+ * todo
+ */
+
+.todo {
+    border: 1px solid #efefef;
+    padding: .5em 1em;
+    margin-bottom: .5em;
+    position: relative;
+}
+
+.todo .delete {
+    display: inline-block;
+    float: right;
+}
+
+.todo .delete::after {
+    content: "x";
+    font-family: sans-serif;
+}
