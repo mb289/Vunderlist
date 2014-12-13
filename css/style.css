@@ -4,7 +4,10 @@
 /**
  * GRIDS
  */
+h3{
+    text-align: center;
 
+}
 .grid {
     width: 100%;
     display: block;
@@ -60,21 +63,34 @@
 
 .todolists {} .todolists > * {
     border: 2px solid black;
-    background: chartreuse;
+    background: grey;
     margin-bottom: 1rem;
+}
+
+.grid #delete {
+    float: right;
 }
 /**
  * active states for page views
  */
 
-.todolists, .todos {
+.todolistsBro{
+    display: none;
+}
+
+.todolistsBro, .todos {
     display: none;
     max-width: 800px;
     margin: 0 auto;
 }
-.todolists.active, .todos.active {
+/*.todolists.active, .todos.active {
+    display: block;
+}*/
+
+.active, .active > * {
     display: block;
 }
+
 @keyframe fadeDown {
     0% {
         opacity: 0;
@@ -117,7 +133,7 @@
  */
 
 .todo {
-    border: 1px solid #efefef;
+    border: 1px solid black;
     padding: .5em 1em;
     margin-bottom: .5em;
     position: relative;
@@ -131,4 +147,32 @@
 .todo .delete::after {
     content: "x";
     font-family: sans-serif;
+    cursor: pointer;
+}
+
+.strikeOut {
+    text-decoration: line-through;
+}
+
+.todoListForm input {
+    width: 100%;
+}
+
+form button {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 2%;
+}
+
+.todoListForm {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.edit {
+    float: right;
+    cursor: pointer;
+    padding-right: 1em;
 }
